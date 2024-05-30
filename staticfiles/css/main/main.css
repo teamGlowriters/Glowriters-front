@@ -323,25 +323,21 @@ var {
 .header-top h1 .first-logo-img,
 .header-top.article.cover_type_text h1 .first-logo-img,
 .header-top.article.beyond_content h1 .first-logo-img {
-    width: 120px;
-    background-position: 0 -80px;
+    width: 166px;
 }
 
 .header-top h1 .first-logo-img {
-    background: url(//t1.daumcdn.net/brunch9/static/images/pc/logo_brunch_v1_221221.png) no-repeat;
-    background-position: 0 -80px;
+    background: url(../../images/glowritersLogo.png) no-repeat;
     display: block;
-    height: 22px;
-    margin-top: -1px;
-    /* width: 120px; */
+    background-position: -16px -82px;
+    height: 40px;
+    margin-top: -6px;
 }
 
 .first-logo-img {
-    /* height:0; */
     line-height: 0;
     overflow: hidden;
     text-indent: -9999px;
-    /* width: 0; */
 }
 
 .top-inner-second {
@@ -434,6 +430,7 @@ var {
     display: flex;
     align-items: center;
     margin-right: auto;
+    margin-left: 0px;
 }
 
 .inner-first-btn {
