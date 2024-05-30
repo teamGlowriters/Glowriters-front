@@ -675,6 +675,10 @@ div.inner-report{
     transform: translate(-50%, -50%);
 }
 
+
+
+/*  */
+
 legend.ir-pm{
     display: block;
     overflow: hidden;
@@ -821,6 +825,25 @@ button.btn-report{
     border-radius: 100px;
     font-size: 14px;
 }
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .radio-input:checked + .lab-comm .ico-radio{
     position: relative;
