@@ -122,3 +122,54 @@ document.addEventListener("DOMContentLoaded", function () {
     otherRadio.checked = true;
   });
 });
+
+//
+const followBtn = document.querySelector(".follow-button");
+const followBtnSpan = document.querySelector(
+  ".follow-button > span.follow-button"
+);
+const subscribeCancelModal = document.querySelector(
+  ".subscriber-realmain-modalWrap"
+);
+const modalBlack = document.querySelector(".modal-black");
+const realBtns = document.querySelectorAll(".continue-button");
+
+followBtn.addEventListener("click", () => {
+  if (followBtnSpan.innerText == "구독하기") {
+    followBtn.style.backgroundColor = "#E7BCDE";
+    followBtnSpan.style.color = "#fff";
+    followBtnSpan.innerText = "구독중";
+  } else {
+    subscribeCancelModal.style.display = "block";
+    modalBlack.style.display = "block";
+    document.body.classList.add("modal-open");
+    realBtns.forEach((realbtn) => {
+      realbtn.addEventListener("click", (e) => {
+        if (e.target.innerText === "계속 구독하기") {
+          subscribeCancelModal.style.display = "none";
+          modalBlack.style.display = "none";
+          document.body.classList.remove("modal-open");
+        } else if (e.target.innerText === "구독 취소하기") {
+          subscribeCancelModal.style.display = "none";
+          modalBlack.style.display = "none";
+          document.body.classList.remove("modal-open");
+          followBtn.style.backgroundColor = "#fff";
+          followBtnSpan.style.color = "#E7BCDE";
+          followBtnSpan.innerText = "구독하기";
+        }
+      });
+    });
+  }
+});
+
+followBtn.addEventListener("mouseover", (e) => {
+  if (followBtnSpan.innerText === "구독중") {
+    followBtnSpan.innerText = "구독취소";
+  }
+});
+
+followBtn.addEventListener("mouseout", (e) => {
+  if (followBtnSpan.innerText === "구독취소") {
+    followBtnSpan.innerText = "구독중";
+  }
+});
