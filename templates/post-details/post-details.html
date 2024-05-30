@@ -25,6 +25,7 @@
       src: url("../../staticfiles/fonts/NotoSansCJKkr-DemiLight.otf");
     }
   </style>
+  <link rel="shortcut icon" href="../../staticfiles/images/glowritersFavicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="../../staticfiles/css/post-details/post-details.css" />
   <title>게시물 상세페이지</title>
 </head>
@@ -303,7 +304,7 @@
               </div>
               <div class="comment-content">
                 <!-- 댓글이 없을때 보이는 화면 -->
-                <div class="comment-none" style="display: none">
+                <div class="comment-none">
                   <span class="ico-brunch ico-brunch-cheer"></span>
                   <strong class="tit-none">작성된 댓글이 없습니다.</strong>
                   <span class="txt-none">작가에게 첫 번째 댓글을 남겨주세요!</span>
@@ -316,8 +317,9 @@
                     <div class="comment">
                       <!-- href는 블로거페이지 -->
                       <a class="link-profile" href="/@@ffhk">
-                        <img class="img-thumb" alt="명랑한 JM이미지" height="32px" src="//img1.daumcdn.net/thumb/C64x64.fjpg/?fname=http://k.kakaocdn.net/dn/BPh5T/btrWRQ6ZoEW/YT5ChPQcahVCXBmM86HpZK/img_640x640.jpg"
-                        width="32px">
+                        <img class="img-thumb" alt="명랑한 JM이미지" height="32px"
+                          src="//img1.daumcdn.net/thumb/C64x64.fjpg/?fname=http://k.kakaocdn.net/dn/BPh5T/btrWRQ6ZoEW/YT5ChPQcahVCXBmM86HpZK/img_640x640.jpg"
+                          width="32px">
                       </a>
                       <div class="cont-info">
                         <div class="info-append">
@@ -345,13 +347,13 @@
                   </li>
                 </ul>
 
-                
+
 
 
 
               </div>
               <!-- 댓글이 없을때는 이것이 보여야함 -->
-              <div class="comment-write-wrap" style="display: none;">
+              <div class="comment-write-wrap">
                 <div class="comment-write">
                   <div class="box-area">
                     <div class="link-profile">
@@ -425,6 +427,117 @@
             </button>
           </span>
         </div>
+      </div>
+    </div>
+  </div>
+  <div class="brunch-layer here" style="background-color: rgb(248, 248, 248); display: none;">
+    <div class="brunchLayerWrapper">
+
+      <div class="dimmed-layer"></div>
+      <div class="brunch-layer report-background">
+        <div class="inner-brunch-layer inner-brunch-layer4">
+          <form>
+            <input type="hidden" name="userId" value="">
+            <input type="hidden" name="contentNo" value="">
+
+            <fieldset>
+              <legend class="ir-pm">신고하기 폼</legend>
+              <div class="report-body">
+                <strong class="tit-report">신고하기</strong>
+                <div class="report-choice-1">
+                  <input class="radio-input" type="radio" id="check1" name="reasonCode" value="" />
+                  <label for="check1" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    욕설, 비방, 차별, 혐오
+                  </label>
+                </div>
+                <div class="report-choice-2">
+                  <input class="radio-input" type="radio" id="check2" name="reasonCode" value="" />
+                  <label for="check2" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    홍보, 영리목적
+                  </label>
+                </div>
+                <div class="report-choice-2">
+                  <input class="radio-input" type="radio" id="check3" name="reasonCode" value="" />
+                  <label for="check3" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    불법 정보
+                  </label>
+                </div>
+                <div class="report-choice-2">
+                  <input class="radio-input" type="radio" id="check4" name="reasonCode" value="" />
+                  <label for="check4" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    음란, 청소년 유해
+                  </label>
+                </div>
+                <div class="report-choice-2">
+                  <input class="radio-input" type="radio" id="check5" name="reasonCode" value="" />
+                  <label for="check5" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    개인 정보 노출, 유포, 거래
+                  </label>
+                </div>
+                <div class="report-choice-2">
+                  <input class="radio-input" type="radio" id="check6" name="reasonCode" value="" />
+                  <label for="check6" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    도배, 스팸
+                  </label>
+                </div>
+                <div class="report-choice-3">
+                  <input class="radio-input" type="radio" id="check7" name="reasonCode" value="" />
+                  <label for="check7" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    기타
+                  </label>
+                </div>
+                <div class="box-txtarea">
+                  <label for="fillReason" class="tf-reason">기타 사유를 입력해 주세요 (최대 500자)</label>
+                  <textarea class="tf_reason" name="reasonMention" id="fillReason"></textarea>
+                </div>
+                <div class="report-choice-3">
+                  <input class="radio-input" type="radio" id="check8" name="reasonCode" value="" />
+                  <label for="check8" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    불법찰영물등 유통 신고
+                  </label>
+                </div>
+                <p class="against">
+                  불법촬영물등 유통 신고는 전기통신사업법 시행령에 따라, 신고인의
+                  개인정보 수집·이용 동의와 신고 사유 등 신고서 제출이 필요합니다.
+                  <br />
+                  음란, 청소년 유해 사유로 신고하시면, 신고서 제출 없이 더 빠르게
+                  조치됩니다.
+                </p>
+                <div class="report-choice-3">
+                  <input class="radio-input" type="radio" id="check9" name="reasonCode" value="" />
+                  <label for="check9" class="lab-comm">
+                    <div class="ico-radio"></div>
+                    권리침해신고
+                  </label>
+                </div>
+                <p class="against">
+                  권리침해 신고는 먼저 침해한 게시물을 신고 후 ‘카카오 권리침해 신고
+                  사이트’ 에서 침해 증빙 서류를 다운 받아 내용을 작성하여 고객센터로
+                  온라인 접수하면 처리됩니다.
+                  <br />
+                  <a href="http://www.kakao.com/policy/right" target="_blank" class="link-against">권리침해 절차 안내보기</a>
+                </p>
+                <div class="wrap-btn">
+                  <button type="reset" class="btn-close">취소</button>
+                  <button type="submit" class="btn-report">신고</button>
+                </div>
+              </div>
+            </fieldset>
+
+
+          </form>
+        </div>
+        <button class="btn-close-2 btnLayerClose">
+          <div class="ico-brunch">닫기</div>
+        </button>
       </div>
     </div>
   </div>
