@@ -476,6 +476,161 @@ span.txt-none{
     margin-top: 4px;
 }
 
+
+/*  */
+.info-comment .comment-list {
+    display: block;
+    width: 100%;
+}
+
+.animation-up {
+    -webkit-animation: animation_up .2s;
+    animation: animation_up .2s;
+    transition: opacity .2s ease-out 0s, transform .2s ease-out 0s;
+}
+
+/* .comment-list:only-child>li:first-of-type, 
+.list-comment-more+.comment-list>li:first-of-type {
+    border: none;
+} */
+.animation-up{
+    border: none;
+}
+
+.comment-list .comment {
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+    margin: 36px 0;
+    width: 100%;
+}
+
+.link-profile {
+    overflow: visible;
+    padding: 0;
+    position: relative;
+}
+
+.link-profile .img-thumb {
+    background-color: #fff;
+    border-radius: 42px;
+    height: 32px;
+    width: 32px;
+}
+
+.comment-list .cont-info {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+}
+
+.comment-list .link-profile+.cont-info {
+    padding-left: 8px;
+    width: calc(100% - 32px);
+}
+
+.comment-list .info-append {
+    font-size: 12px;
+    line-height: 14px;
+    width: 100%;
+}
+
+.comment-list .info-append .tit-userid {
+    align-items: center;
+    display: flex;
+}
+
+.comment-list .info-append .link-userid {
+    color: #111;
+    font-family: "Noto Sans DemiLight", "Malgun Gothic", sans-serif;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.comment-list .info-append .txt-time {
+    color: #959595;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.comment-list .desc-comment {
+    word-wrap: break-word;
+    clear: left;
+    color: #111;
+    font-size: 15px;
+    line-height: 24px;
+    font-family: "Noto Sans Light";
+}
+
+.comment-list .info-append+.desc-comment {
+    margin-top: 12px;
+}
+
+.comment-list .comment-setting {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -1px;
+}
+
+.comment-list .comment-setting .btn-setting {
+    color: #959595;
+    display: inline;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.ico-brunch-pc {
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -9999px;
+    vertical-align: top;
+}
+
+.ico-brunch-pc {
+    background: url(https://t1.daumcdn.net/brunch9/static/images/pc/ico_brunch_pc_v230526.png) no-repeat 0 0 / 300px 300px;
+}
+
+.ico-more-cheer {
+    background-position: -112px -26px;
+    height: 21px;
+    width: 21px;
+}
+
+.wrap-comment-menu {
+    border: 1px solid #ddd;
+    display: none;
+    position: absolute;
+    right: 29px;
+    top: 0;
+    z-index: 9999;
+}
+
+.setting-on .wrap-comment-menu {
+    display: block;
+}
+
+.setting-on .wrap-comment-menu .btn-set {
+    background-color: #fff;
+    box-sizing: border-box;
+    color: #959595;
+    display: block;
+    font-size: 13px;
+    line-height: 22px;
+    padding: 9px 29px;
+    white-space: nowrap;
+    width: 100%;
+    word-break: keep-all;
+}
+
+
+
+
+
+
+
+
 div.comment-write-wrap{
     margin: 0 auto;
     width: 700px;

@@ -3,7 +3,8 @@
     color: #000;
 }
 
-:after, :before {
+:after,
+:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -14,12 +15,40 @@ body {
     margin: 8px;
 }
 
-.ke_photos blockquote, .ke_photos button, .ke_photos code, .ke_photos dd, .ke_photos div, .ke_photos dl, .ke_photos dt, .ke_photos fieldset, .ke_photos form, .ke_photos h1, .ke_photos h2, .ke_photos h3, .ke_photos h4, .ke_photos h5, .ke_photos h6, .ke_photos input, .ke_photos legend, .ke_photos li, .ke_photos ol, .ke_photos p, .ke_photos pre, .ke_photos select, .ke_photos td, .ke_photos textarea, .ke_photos th, .ke_photos ul, body {
+.ke_photos blockquote,
+.ke_photos button,
+.ke_photos code,
+.ke_photos dd,
+.ke_photos div,
+.ke_photos dl,
+.ke_photos dt,
+.ke_photos fieldset,
+.ke_photos form,
+.ke_photos h1,
+.ke_photos h2,
+.ke_photos h3,
+.ke_photos h4,
+.ke_photos h5,
+.ke_photos h6,
+.ke_photos input,
+.ke_photos legend,
+.ke_photos li,
+.ke_photos ol,
+.ke_photos p,
+.ke_photos pre,
+.ke_photos select,
+.ke_photos td,
+.ke_photos textarea,
+.ke_photos th,
+.ke_photos ul,
+body {
     margin: 0;
     padding: 0;
 }
 
-.ke_photos, body, html {
+.ke_photos,
+body,
+html {
     height: 100%;
 }
 
@@ -28,7 +57,33 @@ div {
     unicode-bidi: isolate;
 }
 
-blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
+blockquote,
+body,
+button,
+code,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul {
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: unset;
     -moz-osx-font-smoothing: grayscale;
@@ -46,7 +101,10 @@ i {
     font-style: italic;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     vertical-align: middle;
 }
 
@@ -63,7 +121,13 @@ body {
     color: #333;
 }
 
-body, button, input, select, td, textarea, th {
+body,
+button,
+input,
+select,
+td,
+textarea,
+th {
     font-size: 14px;
     line-height: 1.5;
 }
@@ -91,7 +155,10 @@ div[Attributes Style] {
     -webkit-user-modify: read-only;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: normal;
 }
 
@@ -105,7 +172,9 @@ a {
     color: #333;
 }
 
-a, a:active, a:hover {
+a,
+a:active,
+a:hover {
     text-decoration: underline;
 }
 
@@ -114,7 +183,8 @@ img {
     overflow: clip;
 }
 
-fieldset, img {
+fieldset,
+img {
     border: 0;
 }
 
@@ -122,7 +192,8 @@ img {
     padding: 0;
 }
 
-[contenteditable], [contenteditable]:focus {
+[contenteditable],
+[contenteditable]:focus {
     outline: 0 solid transparent;
 }
 
@@ -137,7 +208,8 @@ img {
     border-bottom: 1px solid #eee;
 }
 
-.write-wrap-imgwrap, .write-wrap-innerwrap {
+.write-wrap-imgwrap,
+.write-wrap-innerwrap {
     font-family: "Noto Sans DemiLight";
     -moz-user-select: none;
     -khtml-user-select: none;
@@ -154,14 +226,22 @@ img {
 }
 
 .write-wrap-imgwrap img {
-    max-width: 100%; /* 이미지의 최대 너비를 부모 요소에 맞게 설정 */
-    max-height: 100%; /* 이미지의 최대 높이를 부모 요소에 맞게 설정 */
-    width: auto; /* 이미지의 너비를 자동으로 조절 */
-    height: auto; /* 이미지의 높이를 자동으로 조절 */
-    position: absolute; /* 이미지 위치 설정 */
-    top: 50%; /* 상단 여백을 50%로 설정하여 세로 중앙 정렬 */
-    left: 50%; /* 좌측 여백을 50%로 설정하여 가로 중앙 정렬 */
-    transform: translate(-50%, -50%); /* 이미지의 중앙 정렬을 위해 사용 */
+    max-width: 100%;
+    /* 이미지의 최대 너비를 부모 요소에 맞게 설정 */
+    max-height: 100%;
+    /* 이미지의 최대 높이를 부모 요소에 맞게 설정 */
+    width: auto;
+    /* 이미지의 너비를 자동으로 조절 */
+    height: auto;
+    /* 이미지의 높이를 자동으로 조절 */
+    position: absolute;
+    /* 이미지 위치 설정 */
+    top: 50%;
+    /* 상단 여백을 50%로 설정하여 세로 중앙 정렬 */
+    left: 50%;
+    /* 좌측 여백을 50%로 설정하여 가로 중앙 정렬 */
+    transform: translate(-50%, -50%);
+    /* 이미지의 중앙 정렬을 위해 사용 */
 }
 
 .write-wrap-updiv .write-wrap-imgwrap {
@@ -233,14 +313,15 @@ img {
     width: 100%;
     box-sizing: border-box;
     border: none;
-    margin: 0px; 
+    margin: 0px;
     font-weight: 100;
     padding: 15px 60px 15px 0px;
     line-height: 31px;
     font-family: Nanum Myeongjo;
     font-size: 38pt;
-    color: #ccc; /* 입력 안내 텍스트의 색상 */
-    background-color : rgb(255,255,255,0.1);
+    color: #ccc;
+    /* 입력 안내 텍스트의 색상 */
+    background-color: rgb(255, 255, 255, 0.1);
 }
 
 .title-input:focus {
@@ -248,11 +329,13 @@ img {
 }
 
 .title-input::placeholder {
-    color: #ccc; /* 입력 안내 텍스트의 색상 */
+    color: #ccc;
+    /* 입력 안내 텍스트의 색상 */
 }
 
 .title-input:not(:placeholder-shown) {
-    color: black; /* 입력된 텍스트의 색상 */
+    color: black;
+    /* 입력된 텍스트의 색상 */
 }
 
 .content-text-input-wrap {
@@ -303,14 +386,18 @@ textarea.content-text-area {
 }
 
 .content-text-area::placeholder {
-    color: #ccc; /* 입력 안내 텍스트의 색상 */
+    color: #ccc;
+    /* 입력 안내 텍스트의 색상 */
 }
 
 .content-text-area:not(:placeholder-shown) {
-    color: black; /* 입력된 텍스트의 색상 */
+    color: black;
+    /* 입력된 텍스트의 색상 */
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
@@ -512,7 +599,7 @@ button.side-btn[data-cmd=insertImage]:after {
     background-position: 1px 2px;
 }
 
-.side-btn-wrap .side-img-icon{
+.side-btn-wrap .side-img-icon {
     background-image: url(//t1.daumcdn.net/brunch/static/img/help/pc/editor/btn_side.v2.png);
 }
 
@@ -579,7 +666,8 @@ button.side-btn[data-cmd=insertImage]:after {
     width: 700px;
 }
 
-[contenteditable], [contenteditable]:focus {
+[contenteditable],
+[contenteditable]:focus {
     outline: 0 solid transparent;
 }
 
@@ -598,7 +686,7 @@ button.side-btn[data-cmd=insertImage]:after {
     width: auto;
 }
 
-.content-wrap-div .real-content{
+.content-wrap-div .real-content {
     text-align: left;
 }
 
@@ -628,6 +716,7 @@ button.side-btn[data-cmd=insertImage]:after {
 .side-category-icon {
     background-position: 1px -124px;
 }
+
 .side-btn-wrap .side-category-icon {
     background-image: url(//t1.daumcdn.net/brunch/static/img/help/pc/editor/btn_side.v2.png);
 }
@@ -645,8 +734,9 @@ button.side-btn[data-cmd=insertImage]:after {
     display: none;
     justify-content: center;
     align-items: center;
-  }
-  .declaration-modal-container {
+}
+
+.declaration-modal-container {
     max-height: 78%;
     vertical-align: middle;
     width: 400px;
@@ -655,13 +745,14 @@ button.side-btn[data-cmd=insertImage]:after {
     flex-direction: column;
     color: rgb(47, 52, 56);
     background-color: rgb(255, 255, 255);
-  }
-  .declaration-modal-title-box {
+}
+
+.declaration-modal-title-box {
     padding: 16px 16px 10px;
     line-height: 0;
-  }
-  
-  .declaration-modal-title {
+}
+
+.declaration-modal-title {
     font-size: 20px;
     line-height: 28px;
     display: inline-block;
@@ -672,8 +763,9 @@ button.side-btn[data-cmd=insertImage]:after {
     margin-left: 24px;
     margin-right: 10px;
     white-space: pre-line;
-  }
-  .declaration-modal-cancel-btn {
+}
+
+.declaration-modal-cancel-btn {
     display: inline-block;
     margin: 0px;
     padding: 0px;
@@ -683,14 +775,16 @@ button.side-btn[data-cmd=insertImage]:after {
     vertical-align: middle;
     width: 24px;
     height: 24px;
-  }
-  .cancel-btn-icon {
+}
+
+.cancel-btn-icon {
     display: inline-block;
     font-size: 24px;
     line-height: 1;
     color: rgb(47, 52, 56);
-  }
-  .declaration-modal-content {
+}
+
+.declaration-modal-content {
     font-size: 16px;
     font-family: Nanum Myeongjo;
     line-height: 24px;
@@ -700,19 +794,23 @@ button.side-btn[data-cmd=insertImage]:after {
     height: 100%;
     word-break: break-all;
     overflow-y: auto;
-  }
-  .declaration-list {
+}
+
+.declaration-list {
     display: block;
-  }
-  .declaration-item {
+}
+
+.declaration-item {
     padding: 17px;
     display: flex;
     align-items: flex-start;
-  }
-  .declaration-label {
+}
+
+.declaration-label {
     display: inline-block;
-  }
-  .declaration-input-box {
+}
+
+.declaration-input-box {
     display: inline-block;
     position: relative;
     width: 20px;
@@ -720,11 +818,12 @@ button.side-btn[data-cmd=insertImage]:after {
     border: 1px solid #E7BCDE;
     border-radius: 50%;
     box-sizing: border-box;
-  
+
     transition: border-color 0.1s ease 0s, background-color 0.1s ease 0s;
     vertical-align: middle;
-  }
-  .declaration-input-box::before {
+}
+
+.declaration-input-box::before {
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -735,11 +834,13 @@ button.side-btn[data-cmd=insertImage]:after {
     transform: scale(0);
     transition: transform 0.4s cubic-bezier(0.5, 2, 0.5, 0.5) 0s;
     background-color: rgb(255, 255, 255);
-  }
-  .declaration-choice {
+}
+
+.declaration-choice {
     background-color: #E188CE;
-  }
-  .declaration-choice::before {
+}
+
+.declaration-choice::before {
     content: "";
     position: absolute;
     border-radius: 50%;
@@ -750,8 +851,9 @@ button.side-btn[data-cmd=insertImage]:after {
     transform: scale(1);
     transition: transform 0.4s cubic-bezier(0.5, 2, 0.5, 0.5) 0s;
     background-color: rgb(255, 255, 255);
-  }
-  .declaration-input {
+}
+
+.declaration-input {
     cursor: pointer;
     position: absolute;
     top: 0px;
@@ -760,23 +862,27 @@ button.side-btn[data-cmd=insertImage]:after {
     width: 100%;
     height: 100%;
     margin: 0px;
-  }
-  .declaration-text {
+}
+
+.declaration-text {
     font-size: 16px;
     line-height: 20px;
     vertical-align: middle;
     margin-left: 6px;
     color: rgb(47, 52, 56);
-  }
-  .declaration-btn-wrap {
+}
+
+.declaration-btn-wrap {
     padding: 9px 16px;
     line-height: 0;
-  }
-  .declaration-btn-container {
+}
+
+.declaration-btn-container {
     padding-top: 1px;
     padding-bottom: 7px;
-  }
-  .declaration-btn {
+}
+
+.declaration-btn {
     margin: 0px;
     border: none;
     background: none #E188CE;
@@ -803,12 +909,14 @@ button.side-btn[data-cmd=insertImage]:after {
     text-align: center;
     color: rgb(255, 255, 255);
     width: 100%;
-  }
+}
 
-  .declaration-btn:hover {
+.declaration-btn:hover {
     background: #E7BCDE;
-  }
-    
-  .open {
+}
+
+.open {
     display: flex;
-  }
+}
+
+/*  */

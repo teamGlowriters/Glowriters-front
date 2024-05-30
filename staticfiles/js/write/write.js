@@ -19,31 +19,53 @@ removeIcon.addEventListener("click", function () {
   removeIcon.style.display = "none";
 });
 
-// lowerfile input 요소 가져오기
-const lowerfile = document.querySelector(".side-file-input");
 
-// content-wrap-div 요소 가져오기
+
+
+
+
+
+
+// 이미지첨부 버튼
+const lowerfile = document.querySelector(".side-file-input");
+// 실제 내용이 쌓이는 본문위치. 여기에 태그가 생김
 const contentDiv = document.querySelector(".content-wrap-div");
+
+// 페이지 로딩 시 보이지 않는 이미지 첨부
+// 이렇게 해야 처음부터끝까지 모든 입력내용이 content-item이라는 클래스의 div태그안에 담김
+window.addEventListener('load', function () {
+  const hiddenImageURL = 'data:image/gif;base64,R0lGODlhAQABAIAAAAUEBA...'; //아무거나
+
+  const divTag = document.createElement("div");
+  divTag.classList.add("content-item");
+
+  const img = document.createElement("img");
+  img.src = hiddenImageURL;
+  img.style.width = "1px"; 
+  img.style.height = "1px";
+
+  divTag.appendChild(img);
+  contentDiv.appendChild(divTag);
+});
 
 // content-wrap-div 요소에 대한 이벤트 리스너 추가
 contentDiv.addEventListener("keydown", function (event) {
   // 사용자가 Enter 키를 눌렀을 때
   if (event.key === 13) {
-    event.preventDefault(); // 기본 동작 중단
-    const text = contentDiv.innerText.trim(); // 입력된 텍스트 가져오기
+    event.preventDefault(); // 새로운 줄 생성 방지
+    const text = contentDiv.innerText.trim(); 
 
     if (text !== "") {
-      // 새로운 p 태그 생성
+      const divTag = document.createElement("div");
+      divTag.classList.add("content-item");
+
       const pTag = document.createElement("p");
       pTag.innerText = text;
 
-      // contentDiv에 새로운 p 태그 삽입
-      contentDiv.appendChild(pTag);
+      divTag.appendChild(pTag);
 
-      // 새로운 줄 삽입
-      contentDiv.appendChild(document.createElement("br"));
+      contentDiv.appendChild(divTag);
 
-      // 입력된 텍스트 지우기
       contentDiv.innerText = "";
     }
   }
@@ -55,17 +77,33 @@ lowerfile.addEventListener("change", function () {
   const reader = new FileReader(); // 파일 리더 객체 생성
 
   reader.onload = function (e) {
-    // 이미지를 새로운 img 요소로 생성하여 contentDiv에 삽입
+    // 새로운 div 태그 생성
+    const divTag = document.createElement("div");
+    divTag.classList.add("content-item");
+
+    // 이미지를 새로운 img 요소로 생성하여 divTag에 삽입
     const img = document.createElement("img");
     img.src = e.target.result;
     img.style.width = "360px";
     img.style.height = "360px";
-    contentDiv.appendChild(img);
+
+    // divTag에 img 태그 삽입
+    divTag.appendChild(img);
+
+    // contentDiv에 새로운 div 태그 삽입
+    contentDiv.appendChild(divTag);
   };
-  contentDiv.appendChild(document.createElement("br"));
+
   // 선택된 파일을 읽기
   reader.readAsDataURL(file);
 });
+
+
+
+
+
+
+
 
 const categorybtn = document.querySelector(".category-btn");
 const categoryModal = document.querySelector(".declaration-modal-wrap");
