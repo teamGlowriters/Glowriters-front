@@ -846,3 +846,71 @@ label.checked{
     background: #fff;
     font-size: 14px;
 }
+
+body.modal-open {
+    overflow: hidden; /* 스크롤 숨기기 */
+}
+
+.subscriber-realmain-modalWrap {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    display: none;
+    height: 283px;
+    left: 50%;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 460px;
+    z-index: 10001;
+}
+
+.subscriber-realmain-modalWrap .modal-title {
+    color: #333;
+    font-size: 24px;
+    font-weight: 100;
+    letter-spacing: -.75px;
+    margin-top: 54px;
+}
+
+.subscriber-realmain-modalWrap .modal-content {
+    color: #959595;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-top: 21px;
+}
+
+.subscriber-realmain-modalWrap .modal-button-wrap {
+    margin-top: 30px;
+    display: flex; /* 버튼을 수평으로 정렬하기 위해 flex 속성 추가 */
+    justify-content: center; /* 버튼을 가운데 정렬하기 위해 추가 */
+    gap: 20px; /* 버튼 사이의 간격 조절 */
+}
+
+.subscriber-realmain-modalWrap button {
+    background-color: #fff;
+    border-radius: 40px;
+    height: 42px;
+    padding: 9px 16px 11px;
+    width: 138px;
+}
+
+.subscriber-realmain-modalWrap .continue-button {
+    border: 1px solid #ddd;
+    color: #959595;
+}
+.continue-button:hover{
+    border: 2px solid #E7BCDE;
+}
+.modal-black {
+    background-color: #000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: .5;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
