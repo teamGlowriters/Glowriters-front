@@ -13,47 +13,6 @@ p {
   unicode-bidi: isolate;
 }
 
-button {
-  appearance: auto;
-  font-style: ;
-  font-variant-ligatures: ;
-  font-variant-caps: ;
-  font-variant-numeric: ;
-  font-variant-east-asian: ;
-  font-variant-alternates: ;
-  font-variant-position: ;
-  font-weight: ;
-  font-stretch: ;
-  font-size: ;
-  font-family: ;
-  font-optical-sizing: ;
-  font-kerning: ;
-  font-feature-settings: ;
-  font-variation-settings: ;
-  text-rendering: auto;
-  color: buttontext;
-  letter-spacing: normal;
-  word-spacing: normal;
-  line-height: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: center;
-  align-items: flex-start;
-  cursor: default;
-  box-sizing: border-box;
-  background-color: buttonface;
-  margin: 0em;
-  padding-block: 1px;
-  padding-inline: 6px;
-  border-width: 2px;
-  border-style: outset;
-  border-color: buttonborder;
-  border-image: initial;
-}
-
-
 blockquote,
 body,
 button,
@@ -99,21 +58,6 @@ body {
   color: #333;
 }
 
-button,
-input,
-select,
-textarea {
-  vertical-align: middle;
-}
-
-button {
-  background-color: transparent;
-  border: 0;
-  border-radius: 0;
-  cursor: pointer;
-  outline: none;
-}
-
 body,
 button,
 input,
@@ -128,6 +72,61 @@ th {
 header {
   display: block;
   unicode-bidi: isolate;
+}
+
+button,
+input,
+select,
+textarea {
+  vertical-align: middle;
+}
+
+button {
+  appearance: auto;
+  font-style: ;
+  font-variant-ligatures: ;
+  font-variant-caps: ;
+  font-variant-numeric: ;
+  font-variant-east-asian: ;
+  font-variant-alternates: ;
+  font-variant-position: ;
+  font-weight: ;
+  font-stretch: ;
+  font-size: ;
+  font-family: ;
+  font-optical-sizing: ;
+  font-kerning: ;
+  font-feature-settings: ;
+  font-variation-settings: ;
+  text-rendering: auto;
+  color: buttontext;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  cursor: default;
+  box-sizing: border-box;
+  background-color: buttonface;
+  margin: 0em;
+  padding-block: 1px;
+  padding-inline: 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: buttonborder;
+  border-image: initial;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  outline: none;
 }
 
 h1 {
@@ -196,21 +195,16 @@ a {
   color: #333;
 }
 
-a,
-a:active,
-a:hover {
-  text-decoration: none;
-}
 
 a {
   color: #333;
   text-decoration: none;
 }
 
-/* a:active,
+a:active,
 a:hover {
   text-decoration: underline;
-} */
+}
 
 main {
   display: block;
@@ -225,6 +219,7 @@ ul {
   list-style: none;
 }
 
+/* 중복되는 코드 일 수 도 있는데 그냥 냅둠 */
 img {
   overflow-clip-margin: content-box;
   overflow: clip;
@@ -255,30 +250,26 @@ var {
   font-style: normal;
   font-weight: normal;
 }
-
 .header {
   height: 60px;
 }
 
+/* .header-top {
+  height: 40px;
+}
 .header-top {
   position: static;
   float: left;
 }
 
 .header-top {
-  height: 40px;
-}
-
-.header-top {
-  /* height: 80px; */
-  /* position: absolute; */
   top: 0;
   transition: background .3s ease-in 0s;
   width: 100%;
   z-index: 10000;
-}
+} */
 
-.header-top .header-top-inner {
+.header-top-inner {
   margin: 30px 30px 0;
 }
 
@@ -286,13 +277,9 @@ var {
   float: left;
 }
 
-.header-top.article .inner-first-btn,
-.header-top.article.this .inner-first-btn {
-  border-radius: 0;
-  background-position: 0 0;
-}
 
-.header-top .inner-first-btn {
+
+.inner-first-btn {
   /* background-position: 0 0; */
   height: 20px;
   margin-right: 14px;
@@ -307,11 +294,11 @@ var {
   width: 0;
 }
 
-.header-top .inner-first-btn {
+.inner-first-btn {
   background: url(//t1.daumcdn.net/brunch/static/img/help/pc/ico_view_cover.v4_230130.png) no-repeat;
 }
 
-.header-top h1 {
+.header-top-inner h1 {
   display: inline-block;
 
 }
@@ -320,43 +307,37 @@ var {
   float: left;
 }
 
-.header-top h1 .first-logo-img,
-.header-top.article.cover_type_text h1 .first-logo-img,
-.header-top.article.beyond_content h1 .first-logo-img {
-  width: 120px;
-  background-position: 0 -80px;
+.header-top-inner h1 .first-logo-img {
+  background: url(../../images/glowritersLogo.png) no-repeat;
+  display: block;
+  background-position: -16px -82px;
+  height: 40px;
+  margin-top: -6px;
 }
 
-.header-top h1 .first-logo-img {
-  background: url(//t1.daumcdn.net/brunch9/static/images/pc/logo_brunch_v1_221221.png) no-repeat;
-  background-position: 0 -80px;
-  display: block;
-  height: 22px;
-  margin-top: -1px;
-  /* width: 120px; */
+.header-top-inner h1 .first-logo-img {
+  width: 166px;
 }
 
 .first-logo-img {
-  /* height:0; */
   line-height: 0;
   overflow: hidden;
   text-indent: -9999px;
-  /* width: 0; */
 }
 
 .top-inner-second {
   float: right;
 }
 
-.header-top .inner-second-search input {
+.inner-second-search input {
   display: none;
 }
 
-.header-top .inner-second-search .second-search-btn {
+.inner-second-search .second-search-btn {
   margin: 0 0 0 16px;
 }
 
-.header-top .inner-second-search .second-search-btn {
+.inner-second-search .second-search-btn {
   background-position: -30px 0;
   display: inline-block;
   height: 22px;
@@ -365,7 +346,7 @@ var {
   width: 22px;
 }
 
-.header-top .second-search-btn {
+.second-search-btn {
   background: url(//t1.daumcdn.net/brunch/static/img/help/pc/ico_view_cover.v4_230130.png) no-repeat;
 }
 
@@ -385,7 +366,7 @@ var {
   float: right;
 }
 
-.header-top .inner-third-login {
+.inner-third-login {
   width: 64px;
   height: 28px;
   border: 1px solid #959595;
@@ -415,27 +396,14 @@ var {
   /* 밑줄제거 */
 }
 
-/* 메뉴바버튼과 브런치로고, 시작하기검색하기, 돋보기 아이콘을 다시 정렬하기위한 코드. 
-즉 위의 css를무시하고 아래를 우선순위로 적용될것이다 */
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-top .header-top-inner {
-  display: flex;
-  align-items: center;
-  margin: 30px 30px 0;
-  width: 100%;
-}
-
 .top-inner-first {
   display: flex;
   align-items: center;
   margin-right: auto;
+  margin-top: -31px;
 }
 
+/* 의심되면 이곳을 제거 */
 .inner-first-btn {
   margin-right: 14px;
 }
@@ -719,10 +687,6 @@ only screen and (min-resolution: 1.5dppx) {
 }
 
 .header-sidemenu .alarm-notify {
-  /* display: block; */
-}
-
-.header-sidemenu .alarm-notify {
   background-color: #E7BCDE;
   border-radius: 2.5px;
   font-size: 0;
@@ -882,60 +846,78 @@ only screen and (min-resolution: 1.5dppx) {
 
 
 
-/* 우상단 검색아이콘 누를때 */
-.show {
-  display: block;
+
+
+
+
+
+
+
+
+
+
+.service-header {
+  height: 80px;
+  position: absolute;
+  top: 0;
+  transition: background .3s ease-in 0s;
+  width: 100%;
+  z-index: 10000;
 }
 
-.header-top .inner-second-search.show {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  height: 34px;
-  position: relative;
-  right: -16px;
-  top: -7px;
-  width: 204px;
+.service-header {
+  height: 40px;
 }
 
-.header-top .inner-second-search.show input {
-  border: 0;
-  display: inline-block;
-  font-size: 12px;
-  height: 20px;
-  line-height: 18px;
-  margin-left: 40px;
-  margin-top: 6px;
-  outline: none;
-  width: 138px;
+.service-header {
+  position: static;
+  float: left;
 }
 
-.header-top .inner-second-search.show .second-search-btn {
-  background-position: -57px 0;
-  display: inline-block;
-  height: 22px;
-  margin: -19px 172px 0 0;
-  width: 22px;
-}
-
-
-
-/* 본문 wrapHome */
-.hide {
+.box-suggest {
+  /* background-color: #fff; */
   display: none;
+  font-family: "Noto Sans Light", sans-serif;
+  height: 100%;
+  left: 0;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
+/* .glow-suggest .box-suggest */
+.box-suggest {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  /* padding: 275px 0 227px; */
+}
+
+.box-suggest-inner {
+  /* height: 440px; */
+}
+
+
 
 .wrap-search-header {
   background-color: #fff;
+  margin-top: -16px;
 }
 
 .wrap-search {
-  background-color: #fff;
-  margin: 0 auto;
-  overflow: hidden;
-  padding: 7px 0 1px;
   position: relative;
   width: 940px;
+  padding: 63px 0 1px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+/* .glow-suggest .wrap-search */
+.wrap-search {
+  border-bottom: 1px solid #333;
+  padding: 0;
 }
 
 .screen-out {
@@ -950,155 +932,73 @@ only screen and (min-resolution: 1.5dppx) {
   text-indent: -9999px;
 }
 
-.search-form .txt-search {
-  border: 0;
-  font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
+.screen-out {
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
 }
 
 .search-form .txt-search {
+  font-size: 30px;
+  font-weight: 350;
+  letter-spacing: -1px;
+  border: 0;
+  width: 940px;
+  font-family: Noto Sans Light, Malgun Gothic, sans-serif;
+  outline: none;
   -webkit-appearance: textfield;
   color: #333;
-  font-size: 30px;
-  letter-spacing: -1px;
-  outline: none;
-  width: 940px;
-}
-
-.search-header {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-.tab-search {
-  margin: 0 auto;
+  padding-bottom: 10px; /* 원하는 값으로 조정 */
+  box-sizing: border-box;
   position: relative;
-  width: 940px;
-  z-index: 9999;
+  z-index: 1;
 }
 
-.tab-search .inner-tab {
-  height: 51px;
-}
 
-.tab-search .inner-tab li {
-  float: left;
-  font-family: "Noto Sans Light";
-}
+/* 검색어입력창의 placeholder를 투명하게 */
+.search-form .txt-search::-webkit-input-placeholder { font-size: 90%; opacity: 0.4; }
+.search-form .txt-search::-moz-placeholder { font-size: 90%; opacity: 0.4; }
+.search-form .txt-search:-ms-input-placeholder { font-size: 90%; opacity: 0.4; }
+.search-form .txt-search:-moz-placeholder { font-size: 90%; opacity: 0.4; }
+.search-form .txt-search::placeholder {  font-size: 90%; opacity: 0.4; }
 
-.tab-search .inner-tab .link-tab {
-  color: #666;
-  float: left;
-  font-size: 14px;
-  letter-spacing: -1px;
-  margin-right: 6px;
-  padding: 19px 0 10px;
-  width: 80px;
-}
 
-.tab-search .inner-tab .on .link-tab {
-  border-bottom: 2px solid #E7BCDE;
-  color: #E7BCDE;
-}
 
-.tab-search .inner-tab:after {
-  clear: both;
-  content: "";
+
+.box-suggest .btn-search {
+  bottom: 0;
   display: block;
+  height: 45px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  width: 23px;
 }
 
-.filter-search {
-  border-top: 1px solid #f5f5f5;
+.service-header .img-ico {
+  background: url(//t1.daumcdn.net/brunch/static/img/help/pc/ico_view_cover.v4_230130.png) no-repeat;
+}
+
+.box-suggest .ico-search {
+  /* background-position: -30px 0; */
+  background-position: -30px 0;
+  display: block;
+  font-size: 0;
+  height: 22px;
+  line-height: 0;
+  text-indent: -9999px;
+  width: 22px;
+}
+
+.suggestGuide {
   display: none;
 }
 
-.filter-search .info-filter {
-  margin: 0 auto;
-  padding: 8px 0 4px;
-  width: 940px;
-}
-
-.filter-search .desc-g {
-  color: #959595;
-  float: left;
-  letter-spacing: -.5px;
-  padding-top: 12px;
-}
-
-.filter-search .cate-filter {
-  float: right;
-  position: relative;
-}
-
-.cont-search {
-  background-color: #fbfbfb;
-}
-
-.search-result {
-  margin: 0 auto;
-  overflow: hidden;
-  width: 940px;
-}
-
-.result-search {
-  overflow: hidden;
-  padding: 26px 0 33px;
-  width: 940px;
-}
-
-.result-search .result-article {
-  float: left;
-  width: 700px;
-}
-
-.search-category {
-  line-height: 21px;
-  overflow: hidden;
-  padding: 0 0 16px;
-}
-
-.search-category .tit-search {
-  color: #959595;
-  float: left;
-  font-size: 13px;
-  font-weight: normal;
-}
-
-.search-category .search-option {
-  float: right;
-  width: 132px;
-}
-
-.search-category .link-option {
-  color: #959595;
-  font-size: 13px;
-  margin: 0 0 0 23px;
-  position: relative;
-}
-
-.search-category .link-option.on {
-  color: #666;
-}
-
-.search-category .link-option.on:before {
-  background-color: #E7BCDE;
-  border-radius: 2px;
-  content: "";
-  height: 4px;
-  left: -8px;
-  margin: -3px 0 0;
-  position: absolute;
-  top: 50%;
-  width: 4px;
-}
-
-/* wrap-article-list */
-.wrap-article-list {
-  overflow: hidden;
-}
-
-.wrap-article-list {
-  padding-bottom: 2px;
-  padding-top: 0;
+.searchLayer.layer-guide .suggestGuide {
+  display: block;
 }
 
 /* 검색어를 입력 전후 요소들이 살짝 올라오는 애니메이션 */
@@ -1132,424 +1032,369 @@ only screen and (min-resolution: 1.5dppx) {
   transition: opacity .2s ease-out 0s, transform .5s ease-out 0s;
 }
 
-.list-article blockquote,
-.list-article button,
-.list-article code,
-.list-article dd,
-.list-article div,
-.list-article dl,
-.list-article dt,
-.list-article fieldset,
-.list-article form,
-.list-article h1,
-.list-article h2,
-.list-article h3,
-.list-article h4,
-.list-article h5,
-.list-article h6,
-.list-article input,
-.list-article legend,
-.list-article li,
-.list-article ol,
-.list-article p,
-.list-article pre,
-.list-article select,
-.list-article td,
-.list-article textarea,
-.list-article th,
-.list-article ul {
-  font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
-}
-.list-article li {
-  border-bottom: 1px solid #eee;
-  overflow: hidden;
-  padding: 25px 0 30px;
-  width: 100%;
+.suggest-guide {
+  margin: 65px auto 0;
+  text-align: center;
+  width: 949px;
 }
 
-.wrap-article-list li {
-  border-bottom: 1px solid #eee;
-  padding: 25px 0 30px;
-  position: relative;
+.suggest-guide .desc-g {
+  color: #333;
+  font-size: 28px;
+  padding: 0 0 12px;
 }
-.wrap-article-list .list-article .link-post {
-  clear: both;
-  display: block;
-  overflow: hidden;
-}
-.wrap-article-list .list-article .post-title {
-  float: left;
-}
-.wrap-article-list .list-article .post-title.has-image {
-  width: 520px;
-}
-.list-article .tit-subject {
-  font-size: 20px;
+
+.suggest-guide .desc-g b {
+  color: #804674;
   font-weight: normal;
-  line-height: 28px;
+}
+
+.box-suggest .wrap-list {
+  margin: 45px auto 0;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  width: 940px;
 }
-.list-article .tit-subject {
-  height: 27px;
+
+.box-suggest .recmd-list {
+  font-size: 0;
+  line-height: 0;
+  margin: 0 0 0 -30px;
+  text-align: center;
+  width: 1000px;
 }
-.wrap-article-list .list-article .tit-subject {
-  font-size: 20px;
-  font-weight: normal;
-  letter-spacing: -1px;
-  white-space: nowrap;
-}
-.result-search .wrap-article-list .list-article .tit-subject {
-  box-sizing: border-box;
+
+.box-suggest .recmd-list li {
   display: inline-block;
-  height: 27px;
-  max-width: 700px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.result-search .wrap-article-list .list-article .has-image .tit-subject {
-  max-width: 520px;
-}
-.article-content b, .tit-subject b {
-  color: #E7BCDE;
-  font-weight: normal;
-}
-.wrap-article-list .list-article .wrap-sub-content {
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  max-height: 43px;
-  overflow: hidden;
-  padding-top: 6px;
-  text-overflow: ellipsis;
-}
-.wrap-article-list .list-article .wrap-sub-content {
-  max-height: 42px;
-}
-.wrap-article-list .list-article .tit-sub {
-  color: #666;
-  font-size: 14px;
-  letter-spacing: -1px;
-  padding-top: 6px;
-}
-.wrap-article-list .list-article .article-content {
-  color: #666;
-  font-size: 14px;
-  line-height: 21px;
-  max-width: 520px;
-}
-.wrap-article-list .list-article .post-append {
-  color: #959595;
-  display: block;
-  font-size: 12px;
-  padding-top: 20px;
-}
-.wrap-article-list .list-article .post-append {
-  overflow: hidden;
-  padding-top: 24px;
-}
-.wrap-article-list .list-article .post-append span {
-  float: left;
-}
-.wrap-article-list .list-article .ico-dot {
-  background-color: #ddd;
-  display: inline-block;
-  height: 2px;
-  margin: 8px 6px 0;
+  height: 198px;
+  margin: 0 30px;
+  transition: all 1s ease-in-out;
   vertical-align: top;
-  width: 2px;
+  width: 140px;
 }
-.wrap-article-list .list-article .publish-time {
-  color: #959595;
+
+.recmd-list .link-g {
+  display: block;
 }
-.txt-by {
-  color: #bfbfbf;
-  font-family: Georgia;
-  font-size: 12px;
-  font-style: italic;
-  height: 15px;
-  margin-right: 4px;
-  width: 15px;
+
+/* img thum 부터 */
+.thumb-img {
+  position: relative;
+  display: block;
 }
-.wrap-article-list .list-article .post-thumb {
-  float: right;
-  margin-top: 5px;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  top: 25px;
+
+.recmd-list .thumb-img {
+  border-radius: 50%;
+  height: 120px;
+  margin: 0 auto;
   width: 120px;
 }
-.wrap-article-list .list-article .post-thumb {
-  margin: 0;
-  right: 20px;
-  top: 30px;
+
+.recmd-list .tit-writer {
+  -webkit-line-clamp: 1;
+  color: #333;
+  font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
+  font-size: 15px;
+  font-weight: lighter;
+  padding: 15px 0 0;
+  -ms-text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.img-thumb {
+
+.recmd-list .tit-writer,
+.recmd-list .txt-writer {
   display: block;
+  line-height: 1.5;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  width: 140px;
 }
-.list-article .post-thumb .img-thumb {
+
+.recmd-list .txt-writer {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-wrap: break-word;
+  color: #666;
+  display: -webkit-box;
+  font-size: 12px;
+  height: 38px;
+  padding: 3px 0 0;
+}
+
+/* suggest-search */
+.suggest-search {
+  margin: 0 auto;
+  min-height: 395px;
+  overflow: hidden;
+  width: 940px;
+}
+
+.suggest-search {
+  display: none;
+}
+
+.cont-suggest {
   float: left;
+  width: 720px;
 }
-.pc-d-n {
-  display: none !important;
+
+.cont-suggest .tit-suggest {
+  display: block;
+  font-size: 13px;
+  line-height: 1;
+  padding: 30px 0 0;
 }
-.list-article .post-thumb .img-thumb {
-  float: left;
+
+.cont-suggest .tit-suggest,
+.cont-suggest .tit-suggest a {
+  color: #959595;
+  font-weight: normal;
+  text-decoration: none;
 }
-.ico-brunch {
-  background: url(//t1.daumcdn.net/brunch9/static/images/pc/ico_brunch8_181106.png) no-repeat;
-}
-.ico-brunch, .ico-brunch-v1 {
+
+.ico-glow {
   display: inline-block;
   line-height: 0;
   overflow: hidden;
   text-indent: -9999px;
   vertical-align: top;
 }
+
+.ico-glow {
+  background: url(//t1.daumcdn.net/brunch9/static/images/pc/ico_brunch_v1_221221.png) no-repeat;
+}
+
+/* 검색어를 썼을때 나오는 레이어들 */
+
+
+
+
+
+
+
+
+
+/* 여기까지 */
+.cont-suggest .tit-suggest .ico-arrow {
+  background-position: -120px 0;
+  display: inline-block;
+  height: 10px;
+  margin: 2px 0 0 3px;
+  width: 10px;
+}
+
+.wrap-article-list {
+  padding-top: 0;
+  padding-bottom: 2px;
+}
+
+.list-common li {
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  padding: 25px 0 30px;
+  width: 100%;
+}
+
 .wrap-article-list li {
-  background-color: #fff;
-  box-sizing: border-box;
   padding: 30px 20px;
-}
-/* 이미지가없는경우 게시물 */
-.wrap-article-list li+li {
-  margin: 14px 0 0;
-}
-/* more-loading */
-.loader {
-  height: 50px;
-  width: 50px;
-}
-.layer-more-loading .loader {
-  margin: 0 auto;
-  padding: 20px 0;
-  width: 26px;
-}
-.loader .dot {
-  -webkit-animation: loading .8s linear infinite;
-  -moz-animation: loading .8s linear infinite;
-  -o-animation: loading .8s linear infinite;
-  animation: loading .8s linear infinite;
-  background-color: rgba(6, 195, 189, .7);
-  border-radius: 3px;
-  height: 6px;
-  margin: 10px;
-  opacity: .25;
-  width: 6px;
-}
-/* 추천작가 */
-.result-recommend {
   background-color: #fff;
-  box-shadow: 0 1px 0 0 #eee;
   box-sizing: border-box;
-  float: right;
-  margin: 36px 0 0 20px;
-  padding: 24px 20px 16px;
+}
+
+.suggest-search .cont-suggest li {
+  border-bottom: none;
+  margin: 26px 0 0;
+  padding: 0;
+}
+
+.suggest-search .list-article .post-title {
+  max-width: 620px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-common .tit-subject {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.suggest-search .tit-subject {
+  line-height: 1;
+}
+
+.list-article .tit-subject {
+  height: 27px;
+}
+
+/* 검색어와 일치하는 색상 하이라이트 주기 */
+.article-content b,
+.tit-subject b {
+  font-weight: 400;
+  color: #804674;
+}
+
+.suggest-search .aside-suggest {
+  overflow: hidden;
   width: 220px;
 }
-.keywordContainer .tit-recommend, .writerContainer .tit-recommend {
-  color: #666;
-  font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
-  font-size: 13px;
-  font-weight: normal;
+
+.suggest-search .aside-suggest .cont-suggest {
+  width: inherit;
 }
+
+.wrap-article-list.intro-magazine-item {
+  padding-top: 8px;
+}
+
+/* search-recommend animation-up-late */
 .search-recommend {
-  max-height: 298px;
   overflow: hidden;
+  max-height: 298px;
   padding: 10px 0 0;
 }
-.search-recommend .item-recommend {
-  display: block;
-  padding: 0 0 0 48px;
-  position: relative;
+
+.suggest-search .search-recommend {
+  padding: 20px 0 0;
 }
+
+.wrap-article-list.intro-magazine-item .search-recommend,
+.wrap-article-list.intro-user-item .search-recommend {
+  padding: 11px 0 0;
+}
+
+.search-recommend .item-recommend {
+  position: relative;
+  padding: 0 0 0 48px;
+  display: block;
+}
+
+.suggest-search .search-recommend .item-recommend {
+  padding: 0 0 0 50px;
+}
+
 .search-recommend .thumb-g {
-  border-radius: 50%;
-  height: 36px;
-  left: 0;
   overflow: hidden;
   position: absolute;
   top: 0;
+  left: 0;
   width: 36px;
+  height: 36px;
+  border-radius: 50%;
 }
+
+.suggest-search .search-recommend .thumb-type1 {
+  border-radius: 4px;
+}
+
+/* .img-thumb {
+    display: block;
+} */
 .search-recommend .thumb-g .img-thumb {
   display: block;
   width: 100%;
 }
+
 .search-recommend .detail-recommend {
   display: table;
-  min-height: 36px;
   overflow: hidden;
-  table-layout: fixed;
   width: 100%;
+  min-height: 36px;
+  table-layout: fixed;
 }
+
 .search-recommend .inner-recommend {
   display: table-cell;
   vertical-align: middle;
 }
+
+.suggest-search .txt-recommend {
+  display: block;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 170px;
+}
+
 .search-recommend .txt-recommend {
+  display: block;
+  overflow: hidden;
   line-height: 1.3;
-  text-overflow: ellipsis;
+  font-family: Noto Sans Light, Malgun Gothic, sans-serif;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
-.search-recommend .txt-info, .search-recommend .txt-recommend {
-  display: block;
-  font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
-  overflow: hidden;
-}
-.search-recommend .txt-info {
-  color: #999;
-  font-size: 12px;
-  line-height: 18px;
-}
-.search-recommend .txt-info .txt-g {
-  float: left;
-}
-.search-recommend .txt-info .ico-dot {
-  background-color: #ddd;
-  border-radius: 1px;
-  float: left;
-  height: 2px;
-  margin: 8px 6px;
-  width: 2px;
-}
-/* 작가 카테고리 */
-.list-search {
-  margin: 0 auto;
-  padding-top: 0;
-  width: 940px;
-}
-.search-writer {
-  overflow: hidden;
-}
-.list-search .search-writer .search-writer-item {
-  background-color: #fff;
-  box-shadow: 0 1px 0 0 #eee;
-  box-sizing: border-box;
-  float: left;
-  height: 206px;
-  margin: 0 0 20px 20px;
-  padding: 24px 20px;
-  position: relative;
-  width: 460px;
-}
-.list-search .search-writer .search-writer-item:nth-child(odd) {
-  margin-left: 0;
-}
-.list-search .search-writer .search-writer-item .search-writer-info {
-  min-height: 100px;
-}
-.list-search .blogger-thumb {
-  background-position: -70px -210px;
-  border-radius: 40px;
-  height: 80px;
-  overflow: hidden;
-  position: absolute;
-  right: 20px;
-  top: 24px;
-  width: 80px;
-}
-.list-search .blogger-thumb .img-thumb {
-  background-color: #fff;
-}
-.frame-g {
-  border: 1px solid #2c2f35;
-  filter: alpha(opacity:10);
-}
-.frame-b, .frame-g {
-  left: 0;
-  opacity: .1;
-  position: absolute;
-  top: 0;
-}
-.list-search .link-follow {
-  display: block;
-  margin: 0 100px 0 0;
-}
-.list-search .tit-subject {
-  ine-height: 22px;
-  display: block;
-  font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
-  font-size: 20px;
+/* 검색어와 일치하는 문구는 하이라이트 */
+.suggest-search .txt-recommend b {
+  color: #804674;
   font-weight: normal;
-  line-height: 22px;
-  max-width: 320px;
-  min-height: 27px;
-  overflow: hidden;
-  padding-top: 1px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
-.list-search .desc-follow {
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  color: #909090;
+
+
+
+
+.suggest-search .aside-suggest .cont-suggest+.cont-suggest {
+  border-top: 1px solid #efefef;
+  margin: 22px 0 0;
+  padding: 0;
+}
+
+.box-suggest .btn-close {
+  background-position: -90px 0;
+  position: absolute;
+  right: 32px;
+  top: 31px;
+}
+
+.box-suggest .ico-close {
+  background-position: -90px 0;
   display: block;
-  font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
-  max-height: 42px;
-  overflow: hidden;
-  padding: 10px 0 0;
-  text-overflow: ellipsis;
-  word-break: break-all;
+  font-size: 0;
+  height: 20px;
+  line-height: 0;
+  text-indent: -9999px;
+  width: 20px;
+  margin-top: -2px;
 }
-/* 검색어입력창의 placeholder를 투명하게 */
-.txt-search::-webkit-input-placeholder { font-size: 90%; opacity: 0.4; }
-.txt-search::-moz-placeholder { font-size: 90%; opacity: 0.4; }
-.txt-search:-ms-input-placeholder { font-size: 90%; opacity: 0.4; }
-.txt-search:-moz-placeholder { font-size: 90%; opacity: 0.4; }
-.txt-search::placeholder {  font-size: 90%; opacity: 0.4; }
-
-
-
-
-
-
-
-
-
-.search-writer .info-append {
+/* 검색결과가 없을때 */
+.suggest-search .txt-nodata {
   color: #959595;
-  font-family: "Noto Sans Light", "Malgun Gothic", sans-serif;
-  font-size: 12px;
-  padding: 7px 0 0;
+  display: block;
+  font-size: 16px;
+  padding: 0 0 9px;
 }
-.search-writer .info-append .ico-dot {
-  background-color: #ddd;
+
+.header-top-inner {
+  position: relative;
+  z-index: 10;
+}
+
+.top-inner-first .inner-first-btn {
+  background-position: 0 0;
+  height: 20px;
+  margin-right: 14px;
+  width: 27px;
+}
+
+.service-header .wrap-custom-magazine {
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.service-header .wrap-custom {
+  color: #666;
   display: inline-block;
-  height: 2px;
-  margin: 8px 5px 0;
-  vertical-align: top;
-  width: 2px;
+  font-size: 17px;
+  left: 50%;
+  letter-spacing: -1px;
+  margin-top: -3px;
+  position: absolute;
+  text-align: center;
 }
-
-/* 돋보기버튼을 누르면 부드럽게 이동하는 코드 */
-/* 초기 상태 */
-.second-search-input {
-  margin-left: 78px;
-  opacity: 0;
-  transition: margin-left 0.15s ease-in-out, opacity 0.15s ease-in-out;
-}
-.second-search-btn {
-  margin-right: 17px;
-  transition: margin-right 0.15s ease-in-out;
-}
-/* 최종 상태 */
-.second-search-input.active {
-  margin-left: 37px;
-  opacity: 1;
-}
-.second-search-btn.active {
-  margin-right: 172px;
-}
-
-
-
-
-
-
-
-
-
 
